@@ -1,7 +1,10 @@
 import { MediaType } from "./Media";
 export interface VideosContainerProps {
   kind: string;
-  id: string;
+  id: {
+    videoId: string;
+    kind: string;
+  };
   snippet: {
     channelTitle: string;
     description: string;

@@ -3,8 +3,8 @@ import axios from "axios";
 import Header from "../components/Header";
 import Videos from "../components/Videos";
 import { ApiResponse } from "../types/ApiResponse";
-import { VideoContainer } from "../components/VideoContainer";
-import VideoPlayer from "../components/VideoPlayer";
+// import { VideoContainer } from "../components/VideoContainer";
+// import VideoPlayer from "../components/VideoPlayer";
 import { useState } from "react";
 import { useRouter } from "next/router";
 
@@ -14,21 +14,15 @@ export default function Home(props: ApiResponse) {
 
   const [videoIdSelected, setVideoIdSelected] = useState(queryId);
 
-  const videoId = "G7Lddc1ZYm4";
-
   return (
     <div>
       <Header title="EdTech" />
       {/* <VideoPlayer video={props.videos.items[0].snippet.thumbnails.high} /> */}
-      <video
-        src={`https://youtube-v31.p.rapidapi.com/videos?part=snippet,statistics&id=${videoId}`}
-        width="320px"
-        height="240px"
-      >
+      <video src={props.} width="320" height="240">
         {" "}
       </video>
 
-      {/* <Videos videos={props.videos} /> */}
+      <Videos videos={props.videos} />
     </div>
   );
 }
@@ -53,10 +47,10 @@ export async function getServerSideProps(context: NextPageContext) {
   });
 
   const queryId = context.query;
-  console.log(queryId);
+  console.log(queryId.videoId);
 
   const responseVideoId = await axios.request({
-    url: `https://youtube-v31.p.rapidapi.com/videos?part=snippet,statistics&id=G7Lddc1ZYm4`,
+    url: `https://youtube-v31.p.rapidapi.com/videos?part=snippet,statistics&id=${queryId.videoId}`,
     method: "GET",
     params: {
       relatedToVideoId: "7ghhRHRP6t4",

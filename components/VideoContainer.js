@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const VideoContainer = styled.ul`
+  flex-wrap: wrap;
   background: black;
   width: 100%;
   height: auto;
@@ -21,11 +22,31 @@ const VideoBox = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column;
-  margin: 2px;
-  font-size: 2rem;
-  background: red;
+  flex-direction: row;
+  font-size: 0.5rem;
+  background: black;
+  font-weight: bold;
   color: white;
 `;
 
-export { VideoContainer, VideoItem, VideoBox, Thumbnail };
+const ChannelName = styled.h2`
+  font-size: 0.5rem;
+  margin-top: 0.5rem;
+  color: white;
+  font-weight: normal;
+`;
+
+const VideoInfos = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+`;
+
+export {
+  VideoContainer,
+  VideoItem,
+  VideoBox,
+  Thumbnail,
+  VideoInfos,
+  ChannelName,
+};

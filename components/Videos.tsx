@@ -1,5 +1,10 @@
-import { VideoContainer, VideoItem, VideoBox } from "./VideoContainer";
-import { VideosContainerProps } from "../types/VideoContainerProps";
+import {
+  VideoContainer,
+  VideoItem,
+  VideoBox,
+  ChannelName,
+  VideoInfos,
+} from "./VideoContainer";
 import { ImageLoaderProps } from "next/image";
 import Image from "next/image";
 import { ApiResponse } from "../types/ApiResponse";
@@ -11,8 +16,8 @@ const Video: React.FC<ApiResponse> = ({ videos }) => {
 
   return (
     <VideoContainer>
-      {videos?.map((video) => (
-        <VideoItem key={video.videos.items}>
+      {videos.items?.map((video) => (
+        <VideoItem key={video.id}>
           <VideoBox>
             <div>
               <Image
@@ -23,10 +28,10 @@ const Video: React.FC<ApiResponse> = ({ videos }) => {
                 height={parseInt(video.snippet.thumbnails.default.height)}
               />
             </div>
-            <div>
+            <VideoInfos>
               <h2>{video.snippet.title}</h2>
-              <h2>{video.snippet.channelTitle}</h2>
-            </div>
+              <ChannelName>{video.snippet.channelTitle}</ChannelName>
+            </VideoInfos>
           </VideoBox>
         </VideoItem>
       ))}
