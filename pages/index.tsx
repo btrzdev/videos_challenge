@@ -2,14 +2,15 @@ import { NextPageContext } from "next";
 import axios from "axios";
 import Header from "../components/Header";
 import Videos from "../components/Videos";
+import { ApiResponse } from "../types/ApiResponse";
 
-export default function Home(props: any) {
+export default function Home(props: ApiResponse) {
   return (
-    <>
+    <div>
       <Header title="EdTech" />
-      {console.log(props.videos.items)}
-      <Videos videos={props.videos.items} />
-    </>
+
+      <Videos videos={props.videos} />
+    </div>
   );
 }
 

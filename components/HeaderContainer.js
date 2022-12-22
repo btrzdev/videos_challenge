@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const HeaderContainer = styled.div`
-  background: red;
+  background: green;
   width: 100vw;
   height: 10vh;
   font-size: 2rem;
