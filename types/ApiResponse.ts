@@ -6,5 +6,5 @@ export interface ApiResponse {
   videos: {
     items: VideosContainerProps[];
   };
-  video: VideosContainerProps;
+  video?: VideosContainerProps;
 }

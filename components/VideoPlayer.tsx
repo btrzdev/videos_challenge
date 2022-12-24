@@ -19,7 +19,7 @@ const VideoPlayer = ({ video }: any) => {
   } = useVideoPlayer(videoElement);
   return (
     <VideoPlayerContainer>
-      <ControlBar>
+      {/* <ControlBar>
         <VideoPlayerBox
           ref={videoElement}
           src={video}
@@ -33,7 +33,7 @@ const VideoPlayer = ({ video }: any) => {
             )}
           </PlayButton>
         </VideoPlayerBox>
-      </ControlBar>
+      </ControlBar> */}
     </VideoPlayerContainer>
   );
 };
