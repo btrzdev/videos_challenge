@@ -32,3 +32,19 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+## TODO LIST FEATURES ## 
+
+- [x] Choose a free videoAPI
+- [x] Test routes and main functions do get video infos
+- [ ] Fix routes enviroment (redirect to query page by default)
+- [x] Create most of main types used
+- [x] Test main functions React Player to development the requirments functions
+- [ ] Solve styled components problems
+- [ ] Create visual control bar component
+- [ ] Dinamic styled component button/pause play
+- [ ] Volume bar (visual control same as youtube)
+- [ ] Review the requirements 
+- [ ] Clean the code
+
