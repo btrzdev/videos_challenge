@@ -17,7 +17,7 @@ const Video: React.FC<ApiResponse> = ({ videos }) => {
   return (
     <VideoContainer>
       {videos.items?.map((video) => (
-        <VideoItem key={video.id}>
+        <VideoItem key={video.snippet.title}>
           <VideoBox>
             <div>
               <Image

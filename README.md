@@ -41,7 +41,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - [ ] Fix routes enviroment (redirect to query page by default)
 - [x] Create most of main types used
 - [x] Test main functions React Player to development the requirments functions
-- [ ] Solve styled components problems
+- [x] Solve styled components problems
 - [ ] Create visual control bar component
 - [ ] Dinamic styled component button/pause play
 - [ ] Volume bar (visual control same as youtube)

@@ -37,6 +37,22 @@ const ControlBar = styled.div`
   transition: all 0.3s ease-in-out;
 `;
 
+const VolumeControlButton = styled.input`
+  ::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+    margin-top: -4px;
+    transition: background-color 150ms;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+`;
+
 const PlayButton = styled.button`
   background: none;
   border: none;
@@ -44,4 +60,26 @@ const PlayButton = styled.button`
   cursor: pointer;
 `;
 
-export { VideoPlayerContainer, VideoPlayerBox, ControlBar, PlayButton };
+const ProgressBar = styled.div`
+  position: absolute;
+  width: 100vw;
+  height: 30px;
+  top: 93%;
+  background: gray;
+`;
+
+const ProgressDone = styled.div`
+  width: ${(props) => props.widthCustom}%;
+  height: 100%;
+  background: red;
+`;
+
+export {
+  VideoPlayerContainer,
+  VideoPlayerBox,
+  ProgressBar,
+  ControlBar,
+  PlayButton,
+  ProgressDone,
+  VolumeControlButton,
+};
